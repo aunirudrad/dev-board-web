@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Board</title>
-    
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -30,7 +30,18 @@
     <!-- fontawesome CDN -->
     <script src="https://kit.fontawesome.com/4b6fa1040a.js" crossorigin="anonymous"></script>
 
-    
+    <!-- CSS styles -->
+   <style>
+    .activity-style{
+      margin: 25px 0;
+      padding: 10px;
+      background: #F4F7FF;
+      border-radius: 20px;
+
+    }
+   </style>
+
+
 </head>
 
 <body class="bg-slate-50">
@@ -47,7 +58,7 @@
             <!-- buttons -->
             <div class="bg-bg-primary flex justify-center items-center gap-2 rounded-full px-4 py-2">
                 <img src="assets/checkbox.png" alt="">
-                <h3 class="font-bold text-[2rem]">23</h3>
+                <h3 id="total-task-count" class="font-bold text-[2rem]">23</h3>
             </div>
             <div class="rounded-full p-3 bg-bg-primary">
                 <img src="assets/theme-btn.png" alt="">
@@ -57,7 +68,7 @@
 
     <!-- main section -->
 
-    <section class="container mx-auto mt-5 flex gap-6">
+    <section class="container mx-auto my-5 flex gap-6">
         <!-- hero section -->
         <div class="p-6 bg-white rounded-lg max-w-3/4">
             <!-- content section -->
@@ -109,20 +120,23 @@
                             <h3 class="text-text-primary text-sm">Deadline</h3>
                             <p class="text-sm font-bold">21 March 2025</p>
                         </div>
-                        <button class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
+                        <button
+                            class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
                     </div>
                 </div>
                 <div class="p-6 bg-bg-primary rounded-2xl">
                     <h4 class="px-4 py-2 bg-white rounded-xl w-28 text-center">CloudSync</h4>
                     <h1 class="my-4 text-xl md:text-2xl font-medium">Add Dark Mode</h1>
-                    <p class="truncate max-w-[294px] bg-white p-4 rounded-lg mb-3">Store the user's preference <br>in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                    <p class="truncate max-w-[294px] bg-white p-4 rounded-lg mb-3">Store the user's preference <br>in
+                        localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
                     <hr class="border-dashed my-3 border-[rgba(55, 82, 253, 0.2)]">
                     <div class="flex justify-between items-center">
                         <div>
                             <h3 class="text-text-primary text-sm">Deadline</h3>
                             <p class="text-sm font-bold">21 March 2025</p>
                         </div>
-                        <button class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
+                        <button
+                            class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
                     </div>
                 </div>
                 <div class="p-6 bg-bg-primary rounded-2xl">
@@ -138,7 +152,8 @@
                             <h3 class="text-text-primary text-sm">Deadline</h3>
                             <p class="text-sm font-bold">21 March 2025</p>
                         </div>
-                        <button class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
+                        <button
+                            class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
                     </div>
                 </div>
                 <div class="p-6 bg-bg-primary rounded-2xl">
@@ -154,7 +169,8 @@
                             <h3 class="text-text-primary text-sm">Deadline</h3>
                             <p class="text-sm font-bold">21 March 2025</p>
                         </div>
-                        <button class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
+                        <button
+                            class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
                     </div>
                 </div>
                 <div class="p-6 bg-bg-primary rounded-2xl">
@@ -170,7 +186,8 @@
                             <h3 class="text-text-primary text-sm">Deadline</h3>
                             <p class="text-sm font-bold">21 March 2025</p>
                         </div>
-                        <button class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
+                        <button
+                            class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
                     </div>
                 </div>
                 <div class="p-6 bg-bg-primary rounded-2xl">
@@ -186,26 +203,29 @@
                             <h3 class="text-text-primary text-sm">Deadline</h3>
                             <p class="text-sm font-bold">21 March 2025</p>
                         </div>
-                        <button class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
+                        <button
+                            class="px-5 py-3 text-white rounded-lg font-medium bg-blue-700 task-btn">Completed</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- aside section -->
-         <div class="p-6 min-h-full w-1/4 bg-white rounded-lg">
+        <div id="aside-section" class="p-6 min-h-full w-1/4 bg-white rounded-lg">
             <div class="flex gap-2 items-center justify-center">
                 <img src="assets/activity.png" alt="activity-icon">
                 <h3 class="font-medium text-xl">Activity Log</h3>
             </div>
             <div class="text-center">
-                <button class="px-5 py-2 my-4 font-medium rounded-lg bg-blue-700 text-white">Clear History</button>
+                <button id="clear-history-btn" class="px-5 py-2 my-4 font-medium rounded-lg bg-blue-700 text-white">Clear History</button>
             </div>
             <hr class="border-dashed">
-         </div>
+        </div>
     </section>
-
-    <script src="js/activity.js"></script>
+    
+    <script src="utilities/utilities.js"></script>
+    <script src="js/task_card.js"></script>
+    <script src="js/activity_log.js"></script>
 </body>
 
 </html>
