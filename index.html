@@ -85,13 +85,13 @@
                 </div>
 
                 <!-- discover new things -->
-                <div
+                <button id="discover-section"
                     class="col-span-2 px-5 py-5 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex justify-center items-center gap-3 rounded-2xl">
                     <img src="assets/board.png" alt="">
                     <div>
                         <p class="text-2xl font-medium text-white">Discover Something <br>New Today!</p>
                     </div>
-                </div>
+                </button>
 
                 <!-- calender and Date -->
                 <div class="px-5 py-5 bg-bg-primary flex justify-center items-center gap-3 rounded-2xl">
@@ -226,6 +226,12 @@
     <script src="utilities/utilities.js"></script>
     <script src="js/task_card.js"></script>
     <script src="js/activity_log.js"></script>
+    
+    <script>
+        document.getElementById('discover-section').addEventListener('click', function(){
+            window.location.href = './blog.html';
+        })
+    </script>
 </body>
 
 </html>

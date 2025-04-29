@@ -39,3 +39,4 @@ function activityLog(eventName) {
     asideSection.appendChild(p);
 }
 
+
