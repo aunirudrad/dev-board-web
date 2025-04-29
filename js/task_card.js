@@ -24,8 +24,8 @@ for (let i = 0; i < elements.length; i++) {
         document.getElementById('total-task-count').innerText = updatedTaskCount;
 
         if (newTaskCount < 1) {
-            alert('Congratulations!');
             alert('Board updated Sucessfully');
+            alert('Congrates!!! You have completed all the current task');
             element.disabled = true;
             element.style.opacity = 0.2;
         } else {

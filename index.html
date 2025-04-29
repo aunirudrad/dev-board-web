@@ -11,6 +11,9 @@
     <script>
         tailwind.config = {
             theme: {
+                fontFamily:{
+                    'poppins': ["Poppins", "sans-serif"],
+                },
                 extend: {
                     colors: {
                         'text-primary': '#00303C',
@@ -44,7 +47,7 @@
 
 </head>
 
-<body class="bg-slate-50">
+<body class="bg-slate-50 text-poppins">
     <!-- header section -->
     <header class="container bg-white mx-auto mt-6 rounded-2xl px-6 py-3 flex justify-between items-center">
 
@@ -60,9 +63,9 @@
                 <img src="assets/checkbox.png" alt="">
                 <h3 id="total-task-count" class="font-bold text-[2rem]">23</h3>
             </div>
-            <div class="rounded-full p-3 bg-bg-primary">
+            <button id="dynamic-color-btn" class="rounded-full p-3 bg-bg-primary">
                 <img src="assets/theme-btn.png" alt="">
-            </div>
+            </button>
         </div>
     </header>
 
@@ -99,8 +102,8 @@
                         <img src="assets/calender.png" alt="">
                     </div>
                     <div>
-                        <p class="font-medium text-[1.375rem] text-text-primary">Wed,</p>
-                        <h3 class="font-bold text-[1.375rem]">Jul 28 2025</h3>
+                        <p id="today" class="font-medium text-[1.375rem] text-text-primary">Wed,</p>
+                        <h3 id="dd-mm-yyyy" class="font-bold text-[1.375rem]">Jul 28 2025</h3>
                     </div>
                 </div>
             </div>
@@ -226,6 +229,8 @@
     <script src="utilities/utilities.js"></script>
     <script src="js/task_card.js"></script>
     <script src="js/activity_log.js"></script>
+    <script src="js/dynamic_bg.js"></script>
+    <script src="js/date-time.js"></script>
     
     <script>
         document.getElementById('discover-section').addEventListener('click', function(){

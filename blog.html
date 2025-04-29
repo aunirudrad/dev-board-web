@@ -10,6 +10,9 @@
     <script>
         tailwind.config = {
             theme: {
+                fontFamily: {
+                    'poppins': ["Poppins", "sans-serif"],
+                },
                 extend: {
                     colors: {
                         'text-primary': '#00303C',
@@ -30,7 +33,7 @@
     <script src="https://kit.fontawesome.com/4b6fa1040a.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-bg-primary">
+<body class="bg-slate-50 text-poppins">
     <!-- header section -->
     <header class="container bg-white mx-auto mt-6 rounded-2xl px-6 py-3 flex justify-between items-center">
 
@@ -53,27 +56,53 @@
     <div class="container mx-auto mb-4 px-5 py-4 bg-white rounded-lg">
         <h3 class="font-medium text-2xl mb-4">What are the different ways to select an element in the DOM?</h3>
         <hr class="border-dashed">
-        <p class="my-4 text-xl">There are different ways to select an element in the DOM. We can use getElementById and using an unique ID, we can select an element. getElementsbyClassName can be another option to select elements which are consisting under same class. Item can be selected using tag names. It will select the element by it's tag name from entire HTML file. There is also querySelector and querySelectorALL by which we can use classname, tagname or unique IDname to select an element.</p>
+        <p class="my-4 text-xl">There are different ways to select an element in the DOM. We can use getElementById and
+            using an unique ID, we can select an element. getElementsbyClassName can be another option to select
+            elements which are consisting under same class. Item can be selected using tag names. It will select the
+            element by it's tag name from entire HTML file. There is also querySelector and querySelectorALL by which we
+            can use classname, tagname or unique IDname to select an element.</p>
     </div>
     <div class="container mx-auto mb-4 px-5 py-4 bg-white rounded-lg">
-        <h3 class="font-medium text-2xl mb-4">What is the difference between innerHTML, innerText, and textContent ?</h3>
+        <h3 class="font-medium text-2xl mb-4">What is the difference between innerHTML, innerText, and textContent ?
+        </h3>
         <hr class="border-dashed">
-        <p class="my-4 text-xl">There are simple fine-lines between these three vital properties. By using innerHTML, it can read and write a whole chunk of HTML data from a selected element. For example, we selected a "div" by an unique ID. If we want to read the entire HTML tags inside that "div" tag, we need to use innerHTML. However, we can use this property to also write new HTML tags and informations using DOM. Unlike innerHTML, innerText will only show the text between a tag. If there is tag other than text, it will return "undefined". As like innerHTML, here we can write texts and outputs from differents functions as STRING value and insert into selected tag. textContent will return every specific characters and spacings from a text. It will count the spacings will also show that as output. </p>
+        <p class="my-4 text-xl">There are simple fine-lines between these three vital properties. By using innerHTML, it
+            can read and write a whole chunk of HTML data from a selected element. For example, we selected a "div" by
+            an unique ID. If we want to read the entire HTML tags inside that "div" tag, we need to use innerHTML.
+            However, we can use this property to also write new HTML tags and informations using DOM. Unlike innerHTML,
+            innerText will only show the text between a tag. If there is tag other than text, it will return
+            "undefined". As like innerHTML, here we can write texts and outputs from differents functions as STRING
+            value and insert into selected tag. textContent will return every specific characters and spacings from a
+            text. It will count the spacings will also show that as output. </p>
     </div>
     <div class="container mx-auto mb-4 px-5 py-4 bg-white rounded-lg">
         <h3 class="font-medium text-2xl mb-4">What is event delegation in the DOM?</h3>
         <hr class="border-dashed">
-        <p class="my-4 text-xl">Event Delegation is nothing but traverse through the child and parent nodes to select another element from a same parent. Let's assume a scenario for better understanding. There's a card, where there's a button, by which the task will be shown as completed and the task title will be shown as alert while clicking in the completed button. Here, if we need to fetch the title for each button clicked, we need to traverse through the whole card from the button until we found the title. Here, we can use event.target.parentNode property to reach to the parent and then by using "childNodes" property then we can select the title element as per button clicked. This is a simple understanding I got from event delegation.</p>
+        <p class="my-4 text-xl">Event Delegation is nothing but traverse through the child and parent nodes to select
+            another element from a same parent. Let's assume a scenario for better understanding. There's a card, where
+            there's a button, by which the task will be shown as completed and the task title will be shown as alert
+            while clicking in the completed button. Here, if we need to fetch the title for each button clicked, we need
+            to traverse through the whole card from the button until we found the title. Here, we can use
+            event.target.parentNode property to reach to the parent and then by using "childNodes" property then we can
+            select the title element as per button clicked. This is a simple understanding I got from event delegation.
+        </p>
     </div>
     <div class="container mx-auto mb-4 px-5 py-4 bg-white rounded-lg">
         <h3 class="font-medium text-2xl mb-4">What is event bubbling in the DOM?</h3>
         <hr class="border-dashed">
-        <p class="my-4 text-xl">To hit the entire tree from the very begining of the document to the end of a single tag is known as bubbling. By using bubbling, we can perform more than one event at a time with a single click. To do so, first the eventListner will trigger the child element known as event trigger. Then it travel through the whole document to capture the child element or tag. After this, it propagates through the all way up from the child element to the parent element. However, we can stop propagation if it's needed through the properties of stopPropagaton() and stopImmediatePropagation()</p>
+        <p class="my-4 text-xl">To hit the entire tree from the very begining of the document to the end of a single tag
+            is known as bubbling. By using bubbling, we can perform more than one event at a time with a single click.
+            To do so, first the eventListner will trigger the child element known as event trigger. Then it travel
+            through the whole document to capture the child element or tag. After this, it propagates through the all
+            way up from the child element to the parent element. However, we can stop propagation if it's needed through
+            the properties of stopPropagaton() and stopImmediatePropagation()</p>
     </div>
     <div class="container mx-auto mb-4 px-5 py-4 bg-white rounded-lg">
         <h3 class="font-medium text-2xl mb-4">How do you create, add, and remove elements using JavaScript?</h3>
         <hr class="border-dashed">
-        <p class="my-4 text-xl">To create, add and remove elements from HTML using Javascript, DOM came up with three vital properties named createElement, appendChild and remove. Here's a sample code for create, add and remove element. <br></p>
+        <p class="my-4 text-xl">To create, add and remove elements from HTML using Javascript, DOM came up with three
+            vital properties named createElement, appendChild and remove. Here's a sample code for create, add and
+            remove element. <br></p>
         <ol>
             <li>let p = document.createElement('p')</li>
             <li>let division = document.createElement('div') <br> division.appendChild('p')</li>
